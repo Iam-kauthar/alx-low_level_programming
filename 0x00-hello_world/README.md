@@ -1,1 +1,1 @@
-My directory readme
+my directory README

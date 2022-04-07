@@ -1,1 +1,1 @@
-this repository introduces C programming
+my C Programming README
