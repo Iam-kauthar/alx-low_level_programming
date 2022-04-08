@@ -1,25 +1,32 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include <stdio.>
+
 /**
- * main - Entry point
+ * main -prints the numbers from 00 to 99
  *
- * Return: Always 0 (Success)
+ * Return: Always (Success)
  */
 int main(void)
 {
-int n;
+	int c, i;
 
-srand( time(0) ); 
-n = rand() - RAND_MAX / 2;
+	c = i = '0';
 
-if (n == 0)
-{
-{printf("%I is zero\n", n);
-}
-else if (n < 0)
-{
-printf("%i is negative\n", n)
-}
-return (0);
+	for (c = '0'; c <= '9'; i++)
+	{
+		for (i = '0'; i <= '9'; i++)
+		{
+			putchar(c);
+			putchar(i);
+
+			if ((c != '9') || (c =='9' && i != '9'))
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	
+	putchar('\n');
+
+	return (0);
 }
