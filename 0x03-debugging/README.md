@@ -1,1 +1,1 @@
-my debugging readme 
+my debug readme
