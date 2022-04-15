@@ -8,7 +8,6 @@
 int main(void)
 {
 
-
 int p = 100;
 int i;
 
@@ -35,6 +34,7 @@ printf("Buzz");
 }
 
 else
+{
 printf("%i ", i);
 }
 
