@@ -11,17 +11,13 @@ unsigned int n1;
 
 if (n < 0)
 {
-
 n1 = -n;
 _putchar('-');
 }
 else
 {
-
-n1 = n;
-       	
+n1 = n;       	
 }
-
 
 if (n1 / 10)
 {
