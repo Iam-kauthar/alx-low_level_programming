@@ -29,8 +29,10 @@ for (p = 0; p <= i; p++)
 _putchar (35);
 }
 
+d--;
 
 _putchar ('\n');
+
 
 
 }
