@@ -1,5 +1,4 @@
-include "main.h"
-
+#include "main.h"
 /**
  * print_rev - prints a string in reverse order
  * @s: A pointer to an int that will be changed
@@ -24,3 +23,4 @@ _putchar (s[i]);
 
 _putchar ('\n');
 }
+
