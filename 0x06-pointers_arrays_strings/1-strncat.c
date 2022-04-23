@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * strncat - concatenates two strings
  * @dest: A pointer to a character that will be changed
@@ -30,7 +31,3 @@ dest[i] = '\0';
 
 return (dest);
 }
-
-
-
-;
