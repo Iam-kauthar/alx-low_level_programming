@@ -1,24 +1,29 @@
-#include "main.h"
-
 /**
- * _strstr - returns pointer to first char of matching substring
- * @haystack: string to find substring in
- * @needle: substring to find match of
- * Return: pointer to first char of matching substring
- */
+ * _strpbrk - matches any character specified
+ * @s: This is the C string to be scanned.
+ * @accept:character in str1 that matches one of the characters in str2
+ *Return: string s that matches any character specified in accept
+ **/
 
-char *_strstr(char *haystack, char *needle)
+char *_strpbrk(char *s, char *accept)
 {
-	int k;
+	int j;
 
-while (*haystack != '\0')
+	while (*s != '\0') /*Declaring WHILE*/
 	{
-		k = 0;
-		while (*haystack == *needle && *haystack != '\0' && *needle != '\0')
-			haystack++, needle++, k++;
-		if (*needle == '\0')
-			return (haystack - k);
-		haystack -= (k - 1), needle -= k;
+		j = 0;
+		while (accept[j] != '\0')  /*Evaluating *accept*/
+		{
+			if (*s == accept[j])
+			{
+				return (s);
+			}
+
+			j++; /*add j+1*/
+		}
+
+		s++; /*add s+1*/
 	}
-	return ('\0');
+	return (0);
+
 }
