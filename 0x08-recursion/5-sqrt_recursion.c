@@ -1,18 +1,32 @@
 #include "main.h"
 
 /**
- * _pow_recursion - raises x to the power of y
- * @x: Number Integer
- * @y: Power
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * sqrt_a - main - check the code
+ * @a: number
+ * @b: number of power
+ * Return: Always 0.
  */
-int _pow_recursion(int x, int y)
+
+int sqrt_a(int a, int b)
 {
-	if (y < 0)
+	if (b * b == a)
+	{
+		return (b);
+	}
+	else if (b * b > a)
+	{
 		return (-1);
-	if (y == 0)
-		return (1);
-	return (x * _pow_recursion(x, y - 1));
+	}
+	return (sqrt_a(a, b + 1));
+}
+
+/**
+ * _sqrt_recursion - main - check the code
+ * @n: number
+ *
+ * Return: Always 0.
+ */
+int _sqrt_recursion(int n)
+{
+	return (sqrt_a(n, 0));
 }
