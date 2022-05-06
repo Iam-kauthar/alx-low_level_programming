@@ -1,19 +1,22 @@
 #include "main.h"
-/**
- * free_grid - allocates a grid, make space and free space
- * @grid: takes in width of grid
- * @height: height of grid
- * Return: free grid
- */
+#include <stdio.h>
+#include <stdlib.h>
 
+/**
+ * free_grid - frees a 2 dimensional grid previously created by
+ * alloc_grid function.
+ * @grid: matrix double pointer
+ * @height: rows (pointer)
+ *
+ * Return: Nothing
+ */
 void free_grid(int **grid, int height)
 {
 	int i;
 
-for (i = 0; i < height; i++)
+	for (i = 0; i < height; i++)
 	{
-		free(grid[i]);
+		free(*(grid + i));
 	}
-
-free(grid);
+	free(grid);
 }
