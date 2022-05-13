@@ -1,1 +1,1 @@
-my 0x0F-function_pointer
+my 0x0F-function_pointers
