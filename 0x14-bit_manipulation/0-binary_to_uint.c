@@ -1,27 +1,37 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary equivalent of a decimal number
- * @n: number to print in binary
+ * binary_to_uint - converts a binary number to an
+ * unsigned int.
+ * @b: binary.
+ *
+ * Return: unsigned int.
  */
-void print_binary(unsigned long int n)
+unsigned int binary_to_uint(const char *b)
 {
-int i, count = 0;
-unsigned long int current;
+unsigned int ui;
+int len, base_two;
 
-for (i = 63; i >= 0; i--)
-{
-current = n >> i;
+if (!b)
+return (0);
 
-if (current & 1)
+ui = 0;
+for (len = 0; b[len] != '\0'; len++)
+	;
+
+for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
 {
-_putchar('1');
-count++;
+if (b[len] != '0' && b[len] != '1')
+{
+return (0);
 }
-else if (count)
-_putchar('0');
+
+if (b[len] & 1)
+{
+ui += base_two;
+}
 
 }
-if (!count)
-_putchar('0');
+
+return (ui);
 }
